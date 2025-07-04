@@ -1,10 +1,3 @@
-//
-//  InstagramApp.swift
-//  Instagram
-//
-//  Created by John Kim on 7/3/25.
-//
-
 import SwiftUI
 
 @main
