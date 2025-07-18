@@ -25,7 +25,6 @@ struct FeedCell: View {
                 .scaledToFill()
                 .frame(height: 400)
                 .clipShape(Rectangle())
-                
             
             // action buttons
             HStack(spacing: 16) {
@@ -44,7 +43,7 @@ struct FeedCell: View {
                 }
                 
                 Button {
-                    print("Like post")
+                    print("Share post")
                 } label: {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
@@ -52,9 +51,9 @@ struct FeedCell: View {
                 
                 Spacer()
             }
-            .padding(.leading, 8)
-            .padding(.top, 4)
-            .foregroundStyle(.black)
+                .padding(.leading, 8)
+                .padding(.top, 4)
+                .foregroundStyle(.black)
             
             // likes label
             Text("23 likes")
@@ -66,13 +65,13 @@ struct FeedCell: View {
             
             // caption label
             HStack {
-                Text("ryan ").fontWeight(.semibold) +
+                Text("ryan123 ").fontWeight(.semibold) +
                 Text("Having a blast spending time with my friends and family!")
             }
-            .font(.footnote)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 10)
-            .padding(.top, 1)
+                .font(.footnote)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 10)
+                .padding(.top, 1)
             
             // timestamp label
             Text("3h ago")
