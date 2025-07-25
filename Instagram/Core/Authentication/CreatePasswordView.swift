@@ -1,28 +1,29 @@
 import SwiftUI
 
-struct AddEmailView: View {
+struct CreatePasswordView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var email = ""
+    @State private var password: String = ""
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("Add your email")
+            Text("Create a password")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("You'll use this email to sign in to your account")
+            Text("Your password must be at least 6 characters in length")
                 .font(.footnote)
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("Email", text: $email)
+            SecureField("Password", text: $password)
                 .autocapitalization(.none)
                 .modifier(IGTextFieldModifier())
+                .padding(.top)
             
             NavigationLink {
-                CreateUsernameView()
+                CompleteSignUpView()
                     .navigationBarBackButtonHidden()
             } label: {
                 Text("Next")
@@ -50,5 +51,5 @@ struct AddEmailView: View {
 }
 
 #Preview {
-    AddEmailView()
+    CreatePasswordView()
 }

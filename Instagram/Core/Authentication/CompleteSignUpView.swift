@@ -1,31 +1,28 @@
 import SwiftUI
 
-struct AddEmailView: View {
+struct CompleteSignUpView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var email = ""
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("Add your email")
+            Spacer()
+            
+            Text("Welcome to Instagram, erica")
                 .font(.title2)
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
                 .padding(.top)
             
-            Text("You'll use this email to sign in to your account")
+            Text("Click below to complete registration and start using Instagram")
                 .font(.footnote)
-                .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            TextField("Email", text: $email)
-                .autocapitalization(.none)
-                .modifier(IGTextFieldModifier())
-            
-            NavigationLink {
-                CreateUsernameView()
-                    .navigationBarBackButtonHidden()
+            Button {
+                print("Complete Sign Up")
             } label: {
-                Text("Next")
+                Text("Complete Sign Up")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
@@ -50,5 +47,5 @@ struct AddEmailView: View {
 }
 
 #Preview {
-    AddEmailView()
+    CompleteSignUpView()
 }
