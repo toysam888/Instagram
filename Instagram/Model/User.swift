@@ -1,6 +1,6 @@
 import Foundation
 
-struct User: Identifiable, Hashable {
+struct User: Identifiable, Hashable, Codable {
     let id: String
     var username: String
     var profileImageUrl: String?
